@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz</title>
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body>
+<div class="container" id="intro">
+    <h1>🎯 Welcome to the Ultimate Quiz</h1>
+    <p class="intro-text">Test your knowledge across multiple topics. Pick a category and let's see how much you know!</p>
+    <div class="topic-grid">
+        <div class="topic" onclick="startQuiz('html')">HTML</div>
+        <div class="topic" onclick="startQuiz('css')">CSS</div>
+        <div class="topic" onclick="startQuiz('javascript')">JavaScript</div>
+        <div class="topic" onclick="startQuiz('python')">Python</div>
+        <div class="topic" onclick="startQuiz('gk')">General Knowledge</div>
+    </div>
+</div>
+
+<div class="container hidden" id="quiz">
+    <h2 id="quizTitle">Quiz</h2>
+    <div class="question" id="questionText">Question</div>
+    <div class="options" id="options"></div>
+    <div class="result" id="result"></div>
+    <div class="score" id="score">Score: 0</div>
+    <div class="final" id="final"></div>
+    <button onclick="nextQuestion()" id="nextBtn">Next</button>
+    <button onclick="restartQuiz()" id="restartBtn" class="hidden">Restart Quiz</button>
+</div>
+
+<script src="task3.js"></script>
+</body>
+</html>
